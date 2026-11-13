@@ -10,23 +10,25 @@ Development and simulation of a nonlinear 6-DOF quadrotor model, with planned im
 - Evaluate tracking performance and robustness under disturbances.
 - Extend the implementation toward C++ and PX4/Gazebo SITL.
 
-## Current Progress
+## Project Progress
 
 ### Completed
-- Nonlinear 12-state quadrotor dynamics in Python.
-- Body-to-inertial rotation matrix using ZYX Euler angles.
-- Open-loop simulation using SciPy `solve_ivp`.
-- Hover equilibrium validation.
-- Free-fall simulation.
-- Initial roll perturbation test (5°).
-- Visualization of altitude and horizontal displacement.
 
-### Planned
-- PID attitude and altitude control.
-- LQR controller design and linearization.
-- Model Predictive Control (MPC).
-- Extended Kalman Filter (EKF).
-- Robustness analysis.
+- Nonlinear 6-DOF quadrotor dynamics with 12 states.
+- Open-loop validation: hover equilibrium, free fall, and roll perturbation.
+- Linearization around the hover equilibrium.
+- Controllability analysis of the linearized state-space model.
+- Continuous-time LQR controller design.
+- Closed-loop LQR stabilization tested on the nonlinear quadrotor model.
+- Visualization of roll, lateral position, and altitude responses.
+
+### In Progress / Planned
+
+- Cascaded PID attitude and position control.
+- Quantitative PID vs. LQR performance comparison.
+- MPC controller implementation.
+- EKF-based state estimation.
+- Robustness analysis under disturbances and parameter uncertainty.
 - C++ implementation and PX4/Gazebo SITL validation.
 
 ## Technologies
